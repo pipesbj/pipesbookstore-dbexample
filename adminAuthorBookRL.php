@@ -320,13 +320,13 @@ else if (isset($_POST["subNewAuthor"])){
 }
 
 function multBooksToAuthor(){
-    $dbhost = 'localhost:3306';
-    $dbuser = 'root';
-    $conn = mysqli_connect($dbhost, $dbuser);
-    $sql = 'use BookStore';
+    $dbhost = 'localhost';
+    $dbuser = 'id1766566_pipesbj';
+	$pw = 'sampledb111';
+    $dbname = 'id1766566_bookstore';
+    $conn = mysqli_connect($dbhost, $dbuser, $pw, $dbname);
+    $sql = 'use id1766566_bookstore';
     mysqli_query($conn, $sql);
-    
-
     
 //    
 //    $AFname = $_POST["AFname"];
@@ -486,12 +486,14 @@ function multBooksToAuthor(){
 }
 
 function authorBookRL(){
-    $dbhost = 'localhost:3306';
-    $dbuser = 'root';
-    $conn = mysqli_connect($dbhost, $dbuser);
-    $sql = 'use BookStore';
+   $dbhost = 'localhost';
+    $dbuser = 'id1766566_pipesbj';
+	$pw = 'sampledb111';
+    $dbname = 'id1766566_bookstore';
+    $conn = mysqli_connect($dbhost, $dbuser, $pw, $dbname);
+    $sql = 'use id1766566_bookstore';
     mysqli_query($conn, $sql);
-    
+	
     $Adob = $_POST["Adob"];
     $Agender = $_POST["Agender"];
     $AFname = $_POST["AFname"];
@@ -686,10 +688,12 @@ echo '<div class="alertSuccess">
 }
 
 function newAuthor(){
-   $dbhost = 'localhost:3306';
-    $dbuser = 'root';
-    $conn = mysqli_connect($dbhost, $dbuser);
-    $sql = 'use BookStore';
+    $dbhost = 'localhost';
+    $dbuser = 'id1766566_pipesbj';
+	$pw = 'sampledb111';
+    $dbname = 'id1766566_bookstore';
+    $conn = mysqli_connect($dbhost, $dbuser, $pw, $dbname);
+    $sql = 'use id1766566_bookstore';
     mysqli_query($conn, $sql);
     
     $Adob = $_POST["Adob"];
@@ -758,10 +762,12 @@ function newAuthor(){
 }
 
 function checkDupeEmail($Contact_Email){
-    $dbhost = 'localhost:3306';
-    $dbuser = 'root';
-    $conn = mysqli_connect($dbhost, $dbuser);
-    $sql = 'use BookStore';
+     $dbhost = 'localhost';
+    $dbuser = 'id1766566_pipesbj';
+	$pw = 'sampledb111';
+    $dbname = 'id1766566_bookstore';
+    $conn = mysqli_connect($dbhost, $dbuser, $pw, $dbname);
+    $sql = 'use id1766566_bookstore';
     mysqli_query($conn, $sql);
 
        $sql = 'SELECT Contact_ID from Author';
@@ -794,12 +800,13 @@ function checkDupeEmail($Contact_Email){
 }//checks for dupe emails in author contacts
 
 function checkDupePhone($Contact_Phone){
-    $dbhost = 'localhost:3306';
-    $dbuser = 'root';
-    $conn = mysqli_connect($dbhost, $dbuser);
-    $sql = 'use BookStore';
+   $dbhost = 'localhost';
+    $dbuser = 'id1766566_pipesbj';
+	$pw = 'sampledb111';
+    $dbname = 'id1766566_bookstore';
+    $conn = mysqli_connect($dbhost, $dbuser, $pw, $dbname);
+    $sql = 'use id1766566_bookstore';
     mysqli_query($conn, $sql);
-    
    
             $sql = 'SELECT Contact_ID from Author';
         $resultCont = mysqli_query($conn, $sql);
