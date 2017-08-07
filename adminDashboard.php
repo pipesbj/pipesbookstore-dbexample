@@ -1,4 +1,4 @@
-  <head>
+<head>
         <style>
         body{
             line-height: 1.6;
@@ -105,7 +105,9 @@
     </style>
     </head>
 <div class="staticBoxSignature">
-           Created By Benjamin Pipes
+           			
+           Author: <a href="https://www.github.com/pipesbj/" target="_blank">Benjamin Pipes</a>
+		   <br><a href="mailto:pipesbj@gmail.com"> Email</a>
 </div>    
     <div class="col-1">    
 <form style="text-align:center" action = "index.php" method = "post">
@@ -151,12 +153,14 @@
 <form style="text-align:center" action = "adminUpdateDetails.php" method = "post">
     <input type = "submit" class="regOperator" value = "Update Entity Details" name = "adminUpdateDetails"><br>
 </form>        
-        
- <form style="text-align: center" action = "adminDashboard.php" method = "post">
-     <h4>- INITIALIZE OR DROP - </h4>
-     <input type = "submit" class="srsOperatorGood" value = "Initialize DB" name = "initDB"><br>
-</form>
 
+<!-- users don't need to init or drop the whole DB, commented out -->
+<!--      
+ <form style="text-align: center" action = "adminDashboard.php" method = "post">
+  <h4>- INITIALIZE OR DROP - </h4>
+     <input type = "submit" class="srsOperatorGood" value = "Initialize DB" name = "initDB"><br> 
+</form>
+-->
  <!--       
 <form style="text-align: center" name = "dropDB" method = "post">     
     <input type = "submit" class="srsOperatorBad" name="dropDB" value = "Drop Database">
@@ -732,8 +736,8 @@ function showTables(){
     echo '<table class="center">'
         . '<tr>'
         . '<th>Customer_ID</th>'
-        . '<th>CFname</th>'
-        . '<th>CLname</th>'
+        . '<th>User</th>'
+        . '<th>Password</th>'
         . '<th>Contact_ID</th>'
         . '</tr>';
     
@@ -1091,8 +1095,8 @@ function showAllTuples(){
     echo '<table class="center">'
         . '<tr>'
         . '<th>Customer_ID</th>'
-        . '<th>CFname</th>'
-        . '<th>CLname</th>'
+        . '<th>User</th>'
+        . '<th>Password</th>'
         . '<th>Contact_ID</th>'
 
         . '</tr>';
@@ -1108,7 +1112,7 @@ function showAllTuples(){
                 echo"<tr>";
                 echo "<td> $Customer_ID </td>";
                 echo "<td> $CFname </td>";
-                echo "<td> $CLname </td>";
+                echo "<td> ****** </td>";
                 echo "<td> $Contact_Id </td>";
                 echo "</tr>";
                
