@@ -1,34 +1,17 @@
+<?php session_start();
+            $_SESSION["CFname"] = null;
+            $_SESSION["CLname"] = null;
+            ?>
+
 <!-- 
 Author:         Benjamin Pipes
-Class:          CSC 425
-Professor:      Ivancic
-Files needed:   index.php, adminDashboard.php,
-                customerDashboard.php
-Using:          Wamp64 for MySQL & PHP server, NetBeans IDE
 
-.................period of work.................Hours
-Time worked:    (5:00 - 6:00) 10/26/2016        1
-                (7:00 - 8:00) 11/1/2016         1
-                (5:00 - 7:30) 11/4/2016         2.5
-                (9:00 - 11:30) 11/10/2016       2.5
-                (3:30am - 5:00am) 11/12/2016    1.5
-                (5:30 - 8:00)   11/12/2016      2.5
-                (9:00 - 11:00)  11/16/2016     2
-                (7:00 - 12:00)  11/17/2016     5
-                (7:30 - 10:30)  11/24/2016      3
-                (7:30 - 10:30)  11/25/2016      3
-                (9:00 - 12:00)  12/2/2016       3
-                (4:00 - 11:00)  12/3/2016       7
-                (10:30 - 11:30) 12/4/2016       13
-Total Time:.....................................47 hrs
-
-    The purpose of this assignment is to implement the database relational
-schema that has been designed throughout the semester (CSC 425). We are to do 
-this creating a simple GUI, which simulates an online book store. 
+    The purpose of this is to implement a database relational schema.
+	I am to do this creating a simple GUI, which simulates an online book store. 
     There is an admin view, which creates the DB, creates the tables, loads
-dummy tuples into the DB, etc,
+	dummy tuples into the DB, etc,
     There is a customer view, where the DB operations are completely abstracted
-from them.
+	from them.
 
 -Author(Author_ID, Adob, Agender, AFname, ALname, Contact_ID)
     Contact_ID FK → Contact_Details(Contact_ID)
@@ -59,11 +42,7 @@ from them.
 -Phone(Contact _Phone, Contact_ID)
     Contact_ID FK → Contact_Details(Contact_ID)
 -->
-
-<?php session_start();
-            $_SESSION["CFname"] = null;
-            $_SESSION["CLname"] = null;
-            ?>  
+  
 <html>
     <head>
         <style>
@@ -77,20 +56,23 @@ from them.
             font-size: 30px; background: aliceblue; border-color: activeborder; border-width:3px; width:350px; height:75px; text-align:center; 
             }
             .staticBoxSignature {
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
-            width: auto;
-            padding: 0px;
-            background-color: whitesmoke;
-            color: #222;
-            font-size: 14px
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			width: auto;
+			padding: 0px;
+			background-color: whitesmoke;
+			color: #222;
+			font-size: 14px
             }
+		
         </style>
     </head>
     <body>
 <div class="staticBoxSignature">
-           Created By Benjamin Pipes
+			
+           <a href="https://www.github.com/pipesbj/" target="_blank">Benjamin Pipes</a>
+		   <br><a href="mailto:pipesbj@gmail.com"> Email</a>
 </div>        
 <form style="text-align:center" action = "adminDashboard.php" method = "post">
    
@@ -102,6 +84,9 @@ from them.
 <form style="text-align:center" action = "customerDashboard.php" method = "post">
      <input type = "submit" class="specOperator"
             value = "Customer Dashboard" name = "gotoCustomerDashboard"><br>
+	<p> Welcome to a mock bookstore that demonstrates basic database design and implementation into a GUI.
+
+		Created by <a href="https://github.com/pipesbj/">Benjamin Pipes</a>.</p>
 </form> 
         
 
