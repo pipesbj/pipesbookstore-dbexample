@@ -1,5 +1,5 @@
-            <?php session_start();
-            if(is_null($_SESSION["CFname"]) && is_null($_SESSION["CLname"])){
+<?php session_start();
+           if(is_null($_SESSION["CFname"]) && is_null($_SESSION["CLname"])){
             $_SESSION["CFname"] = "";
             $_SESSION["CLname"] = "";
             }
@@ -123,7 +123,9 @@
    <body>
        
         <div class="staticBoxSignature">
-           Created By Benjamin Pipes
+           			
+           <a href="https://www.github.com/pipesbj/" target="_blank">Benjamin Pipes</a>
+		   <br><a href="mailto:pipesbj@gmail.com"> Email</a>
         </div>
        
        <div class="col-1">
@@ -178,7 +180,7 @@
         //if user gave customer info that isn't yet created
         echo '<div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span> 
-           Customer name doesn\'t exist. Create customer account first before logging in.
+           Incorrect login information. Customer may not exist or the password may be incorrect
             </div>';
     }
     else{
